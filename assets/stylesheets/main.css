@@ -1,0 +1,227 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'sf_shai_fontairegular';
+  src: url(../fonts/SF_Shai_Fontai-webfont.woff) format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal; }
+
+/* ========================================================================== *	#GET COLOR FUNCTION
+\* ========================================================================== */
+/**
+ * function for retreiving colors from the mapping
+ */
+/* ========================================================================== *	#GET FONT FAMILY FUNCTION
+\* ========================================================================== */
+/**
+ * function for retreiving colors from the mapping
+ */
+/* ========================================================================== *	#Z-INDEX
+\* ========================================================================== */
+/**
+ * A map with all the classes which have a z-index. Add new classes to the map
+ * when needed.
+ */
+/**
+ * This function will return a z-index based on the position of the element in
+ * the z-index map.
+ *
+ * @param {String} $element The name of the element which needs a z-index. When
+ *        no element is specified the method will take the current scope.
+ *
+ * @returns {String} The index of the element in the z-index map.
+ */
+/* ========================================================================== *    #MEDIAQUERY
+\* ========================================================================== */
+/* ========================================================================== *	#BOX-SIZING
+\* ========================================================================== */
+/**
+ * More sensible default box-sizing:
+ * http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*, *:after, *:before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+a {
+  color: #00e;
+  text-decoration: none; }
+
+body {
+  color: #000;
+  font: normal 16px Verdana, sans-serif;
+  margin: 0; }
+
+h1,
+h2,
+h3 {
+  color: red;
+  font-family: Tahoma, sans-serif;
+  font-weight: 900; }
+
+h2,
+h3 {
+  margin-top: 2em; }
+
+.o-siteContainer {
+  margin-left: .5em;
+  margin-right: .5em;
+  max-width: 980px; }
+  @media (min-width: 48em) {
+    .o-siteContainer {
+      margin-left: 1em;
+      margin-right: 1em; } }
+  @media (min-width: 64em) {
+    .o-siteContainer {
+      margin-left: auto;
+      margin-right: auto; } }
+
+.c-homePageVisual {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1em; }
+  .c-homePageVisual__mainImage {
+    margin-left: 1em;
+    margin-right: 1em; }
+  @media (max-width: 47.99em) {
+    .c-homePageVisual .-hideUntilTablet {
+      display: none; } }
+  @media (min-width: 48em) {
+    .c-homePageVisual {
+      margin: 2em; } }
+  @media (min-width: 64em) {
+    .c-homePageVisual__mainImage {
+      margin-left: 2em;
+      margin-right: 2em; } }
+
+.c-siteFooter {
+  border-top: 1px solid;
+  font-size: 12px;
+  margin-bottom: .5em;
+  margin-top: 2.5em;
+  padding-top: .5em;
+  text-align: center; }
+
+.c-siteHeader {
+  background-color: #000;
+  background-image: url(/assets/images/fighter.png);
+  background-position: center right -2em;
+  background-repeat: no-repeat;
+  padding: 1em;
+  position: relative; }
+  .c-siteHeader__title {
+    color: red;
+    font-family: sf_shai_fontairegular, sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    margin: 0;
+    text-align: center; }
+  @media (max-width: 47.99em) {
+    .c-siteHeader__schoolName {
+      display: block; } }
+  @media (min-width: 48em) {
+    .c-siteHeader {
+      background-image: url(/assets/images/logo_small.gif), url(/assets/images/fighter.png);
+      background-position: center left 1em, center right 1em;
+      padding: 0; }
+      .c-siteHeader__title {
+        font-size: 36px;
+        padding-bottom: 1em;
+        padding-top: 1em; } }
+  @media (min-width: 64em) {
+    .c-siteHeader__title {
+      font-size: 52px;
+      padding-bottom: .5em;
+      padding-top: .5em; } }
+  @media (min-width: 90em) {
+    .c-siteHeader__title {
+      padding-bottom: .7em;
+      padding-top: .7em; } }
+
+.c-siteNavigation {
+  background-color: #eee8aa;
+  border-bottom: 1px solid #000;
+  margin-bottom: 1.25em; }
+  .c-siteNavigation__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .c-siteNavigation__item + .c-siteNavigation__item {
+    margin-left: 1em; }
+  .c-siteNavigation__link {
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+    padding-bottom: 1.25em;
+    padding-top: 1.25em; }
+    .c-siteNavigation__link.-isActive {
+      border-bottom: 5px solid; }
+
+.c-testimonial {
+  margin: 0;
+  padding: .8em;
+  /* ====================================================================== *	   ELEMENTS
+	\* ====================================================================== */
+  /* ====================================================================== *	   MEDIA QUERY: MOBILE ONLY
+	\* ====================================================================== */
+  /* ====================================================================== *	   MEDIA QUERY: FROM TABLET
+	\* ====================================================================== */ }
+  .c-testimonial__source {
+    font-size: 12px; }
+    .c-testimonial__source:before {
+      content: '- '; }
+  @media (max-width: 47.99em) {
+    .c-testimonial__content {
+      border-left: 0.25em solid #ddd;
+      padding-left: .5em; }
+    .c-testimonial + .c-testimonial:before {
+      border-top: 1px solid #ddd;
+      content: '';
+      display: block;
+      margin-bottom: 2em;
+      margin-left: 10%;
+      width: 80%; } }
+  @media (min-width: 48em) {
+    .c-testimonial {
+      border-left: 0.5em solid #ddd;
+      -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+      margin-left: 4em;
+      position: relative; }
+      .c-testimonial + .c-testimonial {
+        margin-top: 2em; }
+      .c-testimonial::before {
+        color: #999;
+        content: "“";
+        display: block;
+        font: italic 4em/1 Cochin, Georgia, "Times New Roman", serif;
+        left: -1.25em;
+        position: absolute;
+        text-align: center;
+        width: 1.25em; } }
+
+.u-text-center {
+  text-align: center; }
+
+[hidden] {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */
