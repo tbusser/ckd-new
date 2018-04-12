@@ -1,0 +1,37 @@
+<nav class="c-siteNavigation">
+	<div class="o-siteContainer">
+		<ul class="c-siteNavigation__items">
+			{% assign sitePages = site.pages | sort: "menuOrder" | where_exp:"item","item.menuOrder>0" %}
+			{% for node in sitePages %}
+				<li class="c-siteNavigation__item">
+					{% assign isActive = null %}
+					{% if page.url == node.url %}
+						{% assign isActive = '-isActive' %}
+					{% endif %}
+					<a href="{{node.url}}" class="c-siteNavigation__link {{isActive}}">
+						{{node.title}}
+					</a>
+				</li>
+			{% endfor %}
+
+				<!-- <li class="c-siteNavigation__item">
+					<a href="{% link _pages/index.md %}" class="c-siteNavigation__link">Home</a>
+				</li>
+				<li class="c-siteNavigation__item">
+					<a href="{% link _pages/classes.md %}" class="c-siteNavigation__link">Classes</a>
+				</li>
+				<li class="c-siteNavigation__item">
+					<a href="#" class="c-siteNavigation__link">Profiles</a>
+				</li>
+				<li class="c-siteNavigation__item">
+					<a href="#" class="c-siteNavigation__link">Galleries</a>
+				</li>
+				<li class="c-siteNavigation__item">
+					<a href="{% link _pages/testimonials.md %}" class="c-siteNavigation__link">Testimonials</a>
+				</li>
+				<li class="c-siteNavigation__item">
+					<a href="#" class="c-siteNavigation__link">Contact</a>
+				</li> -->
+			</ul>
+	</div>
+</nav>

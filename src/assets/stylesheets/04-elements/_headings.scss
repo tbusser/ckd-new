@@ -1,0 +1,12 @@
+h1,
+h2,
+h3 {
+	color: get-color('heading');
+	font-family: get-font-family('heading');
+	font-weight: 900;
+}
+
+h2,
+h3 {
+	margin-top: 2em;
+}

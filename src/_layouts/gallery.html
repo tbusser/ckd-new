@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<main class="o-siteContainer o-sidebarLayout">
+	<nav class="o-sidebarLayout__aside">
+		Galleries:
+		<ul>
+		{% for gallery in site.galleries %}
+		<li>
+			{% if gallery.url == page.url %}
+			<span>{{gallery.title}}</span>
+			{% else %}
+			<a href="{{gallery.url}}">{{gallery.title}}</a>
+			{% endif %}
+		</li>
+		{% endfor %}
+		</ul>
+	</nav>
+	<div class="o-sidebarLayout__main">
+		{{ content }}
+		{% include gallery.html galleryId=page.gallery %}
+	</div>
+</ul>
+</main>
+{% include footer.html %}

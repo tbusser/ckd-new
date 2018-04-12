@@ -1,0 +1,15 @@
+.o-siteContainer {
+	margin-left: .5em;
+	margin-right: .5em;
+	max-width: 980px;
+
+	@include mq($from: tablet) {
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+
+	@include mq($from: desktop) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

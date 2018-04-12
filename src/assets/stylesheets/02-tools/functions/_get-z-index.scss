@@ -1,0 +1,36 @@
+/* ========================================================================== *\
+	#Z-INDEX
+\* ========================================================================== */
+/**
+ * A map with all the classes which have a z-index. Add new classes to the map
+ * when needed.
+ */
+$z-index-order: (
+	/* Bottom element, lowest z-index */
+
+	/* Top elements, highest z-index */
+);
+
+/**
+ * This function will return a z-index based on the position of the element in
+ * the z-index map.
+ *
+ * @param {String} $element The name of the element which needs a z-index. When
+ *        no element is specified the method will take the current scope.
+ *
+ * @returns {String} The index of the element in the z-index map.
+ */
+@function get-z-index($element: '') {
+	@if($element == '') {
+		$element: #{&};
+	}
+
+	$z-index: index($z-index-order, $element);
+
+	@if $z-index {
+		@return $z-index;
+	}
+
+	@warn 'There is no item "#{$element}" in this list; choose one of: #{$z-index-order}';
+	@return null;
+}

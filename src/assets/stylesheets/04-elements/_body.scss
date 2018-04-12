@@ -1,0 +1,5 @@
+body {
+	color: get-color(greyscale, black);
+	font: normal get-font-size() get-font-family();
+	margin: 0;
+}

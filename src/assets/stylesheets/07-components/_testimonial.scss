@@ -1,0 +1,63 @@
+.c-testimonial {
+	margin: 0;
+	padding: .8em;
+
+
+	/* ====================================================================== *\
+	   ELEMENTS
+	\* ====================================================================== */
+	&__source {
+		font-size: get-font-size('body', 'smaller');
+
+		&:before {
+			content: '- ';
+		}
+	}
+
+	/* ====================================================================== *\
+	   MEDIA QUERY: MOBILE ONLY
+	\* ====================================================================== */
+	@include mq($until: tablet) {
+		&__content {
+			border-left: .25em solid get-color(greyscale, light);
+			padding-left: .5em;
+		}
+
+		& + & {
+			&:before {
+				border-top: 1px solid get-color(greyscale, light);
+				content: '';
+				display: block;
+				margin-bottom: 2em;
+				margin-left: 10%;
+				width: 80%;
+			}
+		}
+	}
+
+
+	/* ====================================================================== *\
+	   MEDIA QUERY: FROM TABLET
+	\* ====================================================================== */
+	@include mq($from: tablet) {
+		border-left: .5em solid get-color(greyscale, light);
+		box-shadow: 0 0 6px rgba(0,0,0,0.5);
+		margin-left: 4em;
+		position: relative;
+
+		& + & {
+			margin-top: 2em;
+		}
+
+		&::before {
+			color: get-color(greyscale, mid);
+			content: "“";
+			display: block;
+			font: italic 4em/1 get-font-family('quote');
+			left: -1.25em;
+			position: absolute;
+			text-align: center;
+			width: 1.25em;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+/* ========================================================================== *\
+	#GET COLOR FUNCTION
+\* ========================================================================== */
+
+/**
+ * function for retreiving colors from the mapping
+ */
+ @function get-color($color, $tone: 'base') {
+	@return map-get(map-get($colors, $color), $tone);
+}

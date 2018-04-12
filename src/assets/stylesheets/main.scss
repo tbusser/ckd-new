@@ -1,0 +1,51 @@
+@import
+	"01-settings/colors",
+	"01-settings/font-families",
+	"01-settings/sass-mq";
+
+@import
+	"02-tools/functions/get-color",
+	"02-tools/functions/get-font-family",
+	"02-tools/functions/get-font-size",
+	"02-tools/functions/get-z-index",
+	"02-tools/vendor/sass-mq";
+
+@import
+	"03-generic/box-sizing";
+
+@import
+	"04-elements/anchor",
+	"04-elements/body",
+	"04-elements/definition-list",
+	"04-elements/headings",
+	"04-elements/main",
+	"04-elements/section";
+
+@import
+	"05-objects/icons",
+	"05-objects/media",
+	"05-objects/sidebar-layout",
+	"05-objects/site-container";
+
+@import
+	"07-components/cta.text",
+	"07-components/home-page-visual",
+	"07-components/site-footer",
+	"07-components/site-header",
+	"07-components/site-navigation",
+	"07-components/testimonial";
+
+@import
+	"08-trumps/spacings",
+	"08-trumps/text",
+	"08-trumps/visibility";
+
+.c-iconText {
+	align-items: flex-start;
+	display: flex;
+	line-height: 1.5;
+
+	@include mq($from: tablet) {
+		align-items: center;
+	}
+}

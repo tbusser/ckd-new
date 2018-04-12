@@ -1,0 +1,10 @@
+{% assign galleryFolder = include.galleryId | prepend: 'assets/images/gallery/' | append: '/' | relative_url %}
+{% assign gallery_files = site.static_files | where: "gallery", true | where_exp:"item", "item.path contains galleryFolder" %}
+
+{% for image in gallery_files %}
+	{% unless image.path contains '-tn' %}
+	<a href="{{ image.path }}">
+		<img src="{{ image.basename | prepend: galleryFolder | append: '-tn' | append: image.extname }}" alt="">
+	</a>
+	{% endunless %}
+{% endfor %}
